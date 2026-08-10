@@ -12,5 +12,4 @@ public class HelloController {
        return "API em funcionamento!";
    }
 
-
 }
