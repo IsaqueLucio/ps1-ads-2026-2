@@ -1,0 +1,125 @@
+@baseUrl = http://localhost:8080/customers
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Carlos Henrique Souza",
+  "identDocument": "28745196320",
+  "birthDate": "1985-11-14",
+  "streetName": "Rua das Acácias",
+  "houseNumber": "245",
+  "complements": "Casa 2",
+  "district": "Jardim América",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16991234567",
+  "email": "carlos.souza@example.com"
+}
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Fernanda Oliveira Martins",
+  "identDocument": "39482617504",
+  "birthDate": "1992-03-27",
+  "streetName": "Avenida Brasil",
+  "houseNumber": "1800",
+  "complements": "Apto. 34",
+  "district": "Vila Aparecida",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16992345678",
+  "email": "fernanda.martins@example.com"
+}
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "João Pedro Almeida",
+  "identDocument": "51874293611",
+  "birthDate": "1978-08-09",
+  "streetName": "Rua Voluntários da Franca",
+  "houseNumber": "732",
+  "complements": null,
+  "district": "Centro",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16993456789",
+  "email": "joao.almeida@example.com"
+}
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Patrícia Mendes Ribeiro",
+  "identDocument": "64219387526",
+  "birthDate": "1989-12-02",
+  "streetName": "Rua Major Claudiano",
+  "houseNumber": "415",
+  "complements": "Fundos",
+  "district": "Cidade Nova",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16994567890",
+  "email": "patricia.ribeiro@example.com"
+}
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Rafael Augusto Lima",
+  "identDocument": "73158426908",
+  "birthDate": "1996-06-18",
+  "streetName": "Avenida Presidente Vargas",
+  "houseNumber": "1280",
+  "complements": "Apto. 71",
+  "district": "Jardim Petráglia",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16995678901",
+  "email": "rafael.lima@example.com"
+}
+
+###
+
+GET {{baseUrl}}/1
+
+###
+
+GET {{baseUrl}}/2
+
+###
+
+PUT {{baseUrl}}/3
+Content-Type: application/json
+
+{
+  "name": "Carlos Henrique Souza",
+  "identDocument": "28745196320",
+  "birthDate": "1985-11-14",
+  "streetName": "Rua das Acácias",
+  "houseNumber": "245",
+  "complements": "Casa 2",
+  "district": "Jardim América",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16991234567",
+  "email": "carlos.souza@example.com"
+}
+
+###
+
+DELETE {{baseUrl}}/3

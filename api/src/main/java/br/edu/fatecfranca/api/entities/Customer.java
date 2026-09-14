@@ -4,8 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.JdbcTypeCode;
 
 import java.time.LocalDate;
+import java.sql.Types;
 
 @Entity
 @Table(name = "customers")
@@ -43,6 +45,7 @@ public class Customer {
     private String municipality;
 
     @Column(nullable = false, length = 2)
+    @JdbcTypeCode(Types.CHAR)
     private String state;
 
     @Column(nullable = false)
