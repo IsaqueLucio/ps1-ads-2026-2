@@ -1,0 +1,85 @@
+@baseUrl = http://localhost:8080/cars
+
+POST http://localhost:8080/customers
+Content-Type: application/json
+
+{
+  "name": "Carlos Henrique Souza",
+  "identDocument": "28745196320",
+  "birthDate": "1985-11-14",
+  "streetName": "Rua das Acácias",
+  "houseNumber": "245",
+  "complements": "Casa 2",
+  "district": "Jardim América",
+  "municipality": "Franca",
+  "state": "SP",
+  "phone": "16991234567",
+  "email": "carlos.souza@example.com"
+}
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "brand": "Toyota",
+  "model": "Corolla XEi",
+  "color": "Prata",
+  "yearManufacture": 2022,
+  "imported": false,
+  "plates": "ABC1D23",
+  "sellingDate": "2026-09-10T00:00:00",
+  "sellingPrice": 128500.00,
+  "customer": { "id": 1 }
+}
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "brand": "Honda",
+  "model": "Civic Touring",
+  "color": "Preto",
+  "yearManufacture": 2021,
+  "imported": false,
+  "plates": "DEF4G56",
+  "sellingDate": null,
+  "sellingPrice": null
+}
+
+###
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/1
+
+###
+
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "brand": "Toyota",
+  "model": "Corolla Altis",
+  "color": "Branco",
+  "yearManufacture": 2023,
+  "imported": false,
+  "plates": "ABC1D23",
+  "sellingDate": "2026-09-12T00:00:00",
+  "sellingPrice": 134000.00,
+  "customer": { "id": 1 }
+}
+
+###
+
+DELETE {{baseUrl}}/1
+
+###
+
+GET {{baseUrl}}/999
+
