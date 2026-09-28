@@ -1,11 +1,15 @@
 package br.edu.fatecfranca.api.entities;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.JdbcTypeCode;
 
+import java.util.List;
 import java.time.LocalDate;
 import java.sql.Types;
 
@@ -53,4 +57,10 @@ public class Customer {
 
     @Column(nullable = false)
     private String email;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "customer")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private List<Car> cars;
 }

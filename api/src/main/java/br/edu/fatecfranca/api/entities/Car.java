@@ -3,7 +3,9 @@ package br.edu.fatecfranca.api.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
@@ -44,6 +46,8 @@ public class Car {
 
     @ManyToOne 
     @JoinColumn(name = "customer_id")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Customer customer;
     
 }
