@@ -1,0 +1,70 @@
+@baseUrl = http://localhost:8080/users
+
+### 1. Criar o primeiro usuário
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "fullname": "Isaque Lucio",
+  "username": "isaque.demo",
+  "email": "isaque.demo@example.com",
+  "password": "Ficticia!Senha-7391",
+  "isAdmin": false
+}
+
+### 2. Consultar o usuário de id 1
+GET {{baseUrl}}/1
+
+### 3. Criar o segundo usuário
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "fullname": "Marina Costa Ribeiro",
+  "username": "marina.costa",
+  "email": "marina.costa@example.com",
+  "password": "Teste!Marina-4826",
+  "isAdmin": false
+}
+
+### 4. Criar o terceiro usuário
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "fullname": "Pedro Henrique Alves",
+  "username": "pedro.alves",
+  "email": "pedro.alves@example.com",
+  "password": "Teste!Pedro-6158",
+  "isAdmin": false
+}
+
+### 5. Criar o quarto usuário
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "fullname": "Camila Ferreira Santos",
+  "username": "camila.santos",
+  "email": "camila.santos@example.com",
+  "password": "Teste!Camila-9034",
+  "isAdmin": false
+}
+
+### 6. Alterar o e-mail e a senha do usuário de id 1
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "fullname": "Isaque Lucio",
+  "username": "isaque.demo",
+  "email": "isaque.atualizado@example.com",
+  "password": "Nova!Senha-Ficticia-8264",
+  "isAdmin": false
+}
+
+### 7. Excluir o usuário de id 3
+DELETE {{baseUrl}}/3
+
+### 8. Tentar excluir novamente o usuário de id 3 (deve retornar 404)
+DELETE {{baseUrl}}/3
